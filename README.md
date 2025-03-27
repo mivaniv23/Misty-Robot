@@ -41,12 +41,11 @@ Follow these steps to get the project up and running:
     ```    
 4.  **Configure the Robot and API Keys**:
    *   Replace with the Misty robot's IP address.
-   *   
     ```python
     misty = Robot("<YOUR_IP_ADDRESS>")
     ```
-    *   Replace with your Google GenAI API key.
     *
+    *   Replace with your Google GenAI API key.
     ```python
     client = genai.Client(api\_key="<YOUR_API_KEY>")
     ```    
