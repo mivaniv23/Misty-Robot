@@ -14,7 +14,7 @@ print("connected")
 misty.change_led(100, 70, 160)  # Change LED to purple
 misty.move_head(-22, 0, 0)  # Move head
 misty.move_arms(20, 20)  # Move arms
-misty.set_default_volume(8)  # Set volume
+misty.set_default_volume(40)  # Set volume
 misty.display_image("e_Admiration.jpg")  # Display an image on Misty's screen
 
 # Initialize the Google GenAI client with API key
@@ -266,9 +266,11 @@ while True:
                 # If the user chooses to sign in, display a QR code for sign-in
                 misty.speak("Hi, welcome to Catawba College Digital Learning Lab, please sign in using this QR-Code")
                 time.sleep(5)
+                misty.move_head(-22, 0, 0)
                 misty.display_image("QR-CODE.jpg")
                 time.sleep(30)
                 misty.display_image("e_Admiration.jpg")
+                misty.move_head(-12, 0, 0)
                 time.sleep(5)
                 misty.unregister_all_events()  # Unregister all events after signing in
             else:
