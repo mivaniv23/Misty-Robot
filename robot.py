@@ -266,9 +266,9 @@ while True:
                 # If the user chooses to sign in, display a QR code for sign-in
                 misty.speak("Hi, welcome to Catawba College Digital Learning Lab, please sign in using this QR-Code")
                 time.sleep(5)
-                misty.display_image("e_Love.jpg")
-                time.sleep(30)
                 misty.display_image("QR-CODE.jpg")
+                time.sleep(30)
+                misty.display_image("e_Admiration.jpg")
                 time.sleep(5)
                 misty.unregister_all_events()  # Unregister all events after signing in
             else:
