@@ -33,12 +33,12 @@ Follow these steps to get the project up and running:
     *   Place the robot.py file in the same directory as the extracted SDK files.
         
 3.  **Install Dependencies**:
-    
-    *   bashCopypip install -q -U google-genai
-    *   bashCopypip install -q -U requests==2.25.1
-    *   bashCopypip install -q -U websocket-client==0.57.0
-    *   bashCopypip install -q -U yapf==0.30.0
-        
+    ```bash
+    pip install -q -U google-genai
+    pip install -q -U requests==2.25.1
+    pip install -q -U websocket-client==0.57.0
+    pip install -q -U yapf==0.30.0
+    ```    
 4.  **Configure the Robot and API Keys**:
     
     *   pythonCopymisty = Robot("")client = genai.Client(api\_key="")
