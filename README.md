@@ -40,20 +40,22 @@ Follow these steps to get the project up and running:
     pip install -q -U yapf==0.30.0
     ```    
 4.  **Configure the Robot and API Keys**:
-    
-    *   pythonCopymisty = Robot("")client = genai.Client(api\_key="")
-        
-    *   Replace with the Misty robot's IP address.
-        
+   *   Replace with the Misty robot's IP address.
+    ```python
+    misty = Robot("<YOUR_IP_ADDRESS>")
+    ```
     *   Replace with your Google GenAI API key.
+    ```python
+    client = genai.Client(api\_key="<YOUR_API_KEY>")
+    ```    
         
-5.  **Running the Code**:
+6.  **Running the Code**:
     
     *   Open a terminal or command prompt in the directory where you placed the files.
-        
-    *   bashCopypy robot.py
-        
-6.  **Interacting with the Robot**:
+    ```bash    
+    py robot.py
+    ```    
+7.  **Interacting with the Robot**:
     
     *   Once the script is running, the robot will start its face recognition.
         
