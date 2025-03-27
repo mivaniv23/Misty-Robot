@@ -268,7 +268,7 @@ while True:
                 time.sleep(5)
                 misty.display_image("e_Love.jpg")
                 time.sleep(30)
-                misty.display_image("e_Admiration.jpg")
+                misty.display_image("QR-CODE.jpg")
                 time.sleep(5)
                 misty.unregister_all_events()  # Unregister all events after signing in
             else:
