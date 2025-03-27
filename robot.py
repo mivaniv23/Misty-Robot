@@ -248,6 +248,7 @@ while True:
 
     # Callback function when a face is recognized
     def recognized(data):
+        misty.move_head(-22, 0, 0)
         isPerson = data["message"]["personName"]
         print(data)
         
@@ -261,12 +262,12 @@ while True:
                 misty.speak(conversation_text)
                 time.sleep(estimate_speaking_time(conversation_text))  # Wait for the speech to be spoken
                 conversation()  # Start the conversation loop
-                misty.unregister_all_events()  # Unregister all events after the conversation
+                misty.move_head(-12, 0, 0)
+                misty.unregister_all_events() # Unregister all events after the conversation
             elif "sign in" in option.lower():
                 # If the user chooses to sign in, display a QR code for sign-in
                 misty.speak("Hi, welcome to Catawba College Digital Learning Lab, please sign in using this QR-Code")
                 time.sleep(5)
-                misty.move_head(-22, 0, 0)
                 misty.display_image("QR-CODE.jpg")
                 time.sleep(30)
                 misty.display_image("e_Admiration.jpg")
@@ -278,6 +279,7 @@ while True:
         else:
             misty.speak("Hey, welcome back, " + data["message"]["personName"]) # Welcome person that misty knows
             time.sleep(5)
+            misty.move_head(-12, 0, 0)
             misty.unregister_all_events()  # Unregister all events if a known person is recognized
 
     # Register the face recognition event
