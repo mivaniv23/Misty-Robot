@@ -276,8 +276,9 @@ while True:
             else:
                 misty.unregister_all_events()  # Unregister all events if no valid option
         else:
+            misty.speak("Hey, welcome back, " + data["message"]["personName"]) # Welcome person that misty knows
+            time.sleep(5)
             misty.unregister_all_events()  # Unregister all events if a known person is recognized
-            misty.stop()  # Stop the robot if the person is recognized as known
 
     # Register the face recognition event
     misty.register_event(event_name='face_recognition_event', event_type=Events.FaceRecognition, callback_function=recognized, debounce=500, keep_alive=True)
