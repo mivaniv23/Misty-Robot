@@ -40,15 +40,13 @@ Follow these steps to get the project up and running:
     pip install -q -U yapf==0.30.0
     ```    
 4.  **Configure the Robot and API Keys**:
-   *   Replace with the Misty robot's IP address.
-    ```py
-    misty = Robot("<YOUR_IP_ADDRESS>")
-    ```
-    *
+    *   Replace with the Misty robot's IP address.
     *   Replace with your Google GenAI API key.
-    ```py
-    client = genai.Client(api\_key="<YOUR_API_KEY>")
-    ```    
+        ```python    
+        misty = Robot("<YOUR_IP_ADDRESS>")
+        client = genai.Client(api\_key="<YOUR_API_KEY>")
+        ```
+
         
 6.  **Running the Code**:
     
