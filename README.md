@@ -1,7 +1,9 @@
-Misty Robot Assistant for Catawba College Digital Learning Lab
-==============================================================
+Misty Intruder Alert
+====================
 
-This project allows interaction with the Misty robot for Catawba College's Digital Learning Lab. The robot provides information about the lab's equipment, policies, and hours of operation, while also allowing users to have general conversations. Additionally, the robot can process voice commands for signing in or engaging in a conversation, leveraging Google GenAI for conversational responses.
+In this project you can learn how to have Misty trigger an intruder alert if she doesn't recognize a person and send a message to your phone. 
+
+If Misty detects a face that's not stored in her memory, she will access your WhatsApp web and send a text message to your phone number saying: "Intruder!". If she does recognize the person, she will send the message "person_name is home!". Before executing the code, open https://web.whatsapp.com/ and log in with your phone number. 
 
 Requirements
 ------------
@@ -10,7 +12,7 @@ Requirements
     
 *   **Python 3.9**: Ensure Python is installed on your system.
     
-*   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
+*   **WhatsApp Account*: You need an account to be able to send messages.
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
@@ -34,17 +36,17 @@ Follow these steps to get the project up and running:
         
 3.  **Install Dependencies**:
     ```bash
-    pip install -q -U google-genai
+    pip install pywhatkit
     pip install -q -U requests==2.25.1
     pip install -q -U websocket-client==0.57.0
     pip install -q -U yapf==0.30.0
     ```    
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
-    *   Replace with your Google GenAI API key.
+    *   Replace with your WhatsApp Account number.
         ```python    
         misty = Robot("<YOUR_IP_ADDRESS>")
-        client = genai.Client(api\_key="<YOUR_API_KEY>")
+        MyNumber = "___"
         ```
 
         
@@ -54,27 +56,20 @@ Follow these steps to get the project up and running:
     ```bash    
     py robot.py
     ```    
-7.  **Interacting with the Robot**:
-    
-    *   Once the script is running, the robot will start its face recognition.
-        
-    *   When a face is recognized as "unknown," it will ask whether you want to sign in or start a conversation.
-        
-    *   If you choose a conversation, the robot will transcribe your speech, process it using Google GenAI, and respond accordingly.
-        
-    *   If you choose to sign in, the robot will display a QR code for you to scan.
         
 
-Features
+Description
 --------
 
-*   **Misty Robot Movements**: The robot's LED color, head position, and arms can be customized.
-    
-*   **Voice Interaction**: The robot can record speech, transcribe it, and interact with you based on the transcription.
-    
-*   **Google GenAI Integration**: The robot uses Google GenAI to provide conversational responses and interact intelligently with users.
-    
-*   **Sign-In Feature**: Users can sign in using a QR code displayed by the robot.
+* We will utilize the Python pywhatkit library for this purpose, which enables message sending on WhatsApp in a semi-automatic way. To install pywhatkit, use the following command line in your terminal: "pip install pywhatkit". Press enter and wait for the installation of all the required packages.
+
+* Another required action prior to using Whatsapp is to train Misty on the faces you want her to recognize as friends (misty studio Explore>Vision>Train faces) and upload all the files you'll run in the code, both images and audio files (misty studio Explore>Expressions>Upload audio files or Upload images or videos). 
+
+* Note: Sometimes the WhatsApp message might not be sent before the website closes. In that case, try running the code again.
+
+* To reset Misty after running the code, you can access its Misty Studio and in the wizard section, click on the "Body Reset" action.
+
+* It can only be used in a desktop environment and is not compatible with the Misty Studio Python Interface, so before initiating, ensure you have all the necessary resources for the task.
     
 
 Notes
