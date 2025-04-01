@@ -1,7 +1,11 @@
-Misty Robot Assistant for Catawba College Digital Learning Lab
-==============================================================
+Misty Conference Assistant
+==========================
 
-This project allows interaction with the Misty robot for Catawba College's Digital Learning Lab. The robot provides information about the lab's equipment, policies, and hours of operation, while also allowing users to have general conversations. Additionally, the robot can process voice commands for signing in or engaging in a conversation, leveraging Google GenAI for conversational responses.
+This project aims to make Misty a conference assistant.
+
+This is a basic interpretation but her code can be enriched with many actions and sentences that can assist the speaker at a conference. This code will allow the speaker to control the presentation triggering Misty's bump sensors. If the rear right sensor is triggered Misty will move to the next slide, if the rear left sensor is triggered Misty will move to the previous slide. After you run the Python code from your computer open your presentation and wait for the magic to happen.
+
+We have also added another command: if you press the front left sensor all the events will be stopped and your program can finish under your control. 
 
 Requirements
 ------------
@@ -9,8 +13,6 @@ Requirements
 *   **Misty Robot**: You will need a Misty robot to interact with the Python code.
     
 *   **Python 3.9**: Ensure Python is installed on your system.
-    
-*   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
@@ -34,7 +36,7 @@ Follow these steps to get the project up and running:
         
 3.  **Install Dependencies**:
     ```bash
-    pip install -q -U google-genai
+    pip install pyautogui
     pip install -q -U requests==2.25.1
     pip install -q -U websocket-client==0.57.0
     pip install -q -U yapf==0.30.0
@@ -44,7 +46,6 @@ Follow these steps to get the project up and running:
     *   Replace with your Google GenAI API key.
         ```python    
         misty = Robot("<YOUR_IP_ADDRESS>")
-        client = genai.Client(api\_key="<YOUR_API_KEY>")
         ```
 
         
@@ -54,28 +55,14 @@ Follow these steps to get the project up and running:
     ```bash    
     py robot.py
     ```    
-7.  **Interacting with the Robot**:
-    
-    *   Once the script is running, the robot will start its face recognition.
-        
-    *   When a face is recognized as "unknown," it will ask whether you want to sign in or start a conversation.
-        
-    *   If you choose a conversation, the robot will transcribe your speech, process it using Google GenAI, and respond accordingly.
-        
-    *   If you choose to sign in, the robot will display a QR code for you to scan.
         
 
-Features
+Description
 --------
 
-*   **Misty Robot Movements**: The robot's LED color, head position, and arms can be customized.
-    
-*   **Voice Interaction**: The robot can record speech, transcribe it, and interact with you based on the transcription.
-    
-*   **Google GenAI Integration**: The robot uses Google GenAI to provide conversational responses and interact intelligently with users.
-    
-*   **Sign-In Feature**: Users can sign in using a QR code displayed by the robot.
-    
+*We will utilize the Python pyautogui library for this purpose, which enables our code to control the keyboard. To install pyautogui, use the following command line in your terminal: "pip install pyautogui". Press enter and wait for the installation of all the required packages.
+
+*It can only be used in a desktop environment and is not compatible with the Misty Studio Python Interface, so ensure you have all the necessary resources for the task before initiating.
 
 Notes
 -----
