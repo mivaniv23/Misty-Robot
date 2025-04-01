@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 # Initialize Misty robot with IP address
-misty = Robot("10.100.2.30")
+misty = Robot("<YOUR_IP_ADDRESS>")
 print("connected")
 
 # Customize the robot's appearance and movements
@@ -18,7 +18,7 @@ misty.set_default_volume(40)  # Set volume
 misty.display_image("e_Admiration.jpg")  # Display an image on Misty's screen
 
 # Initialize the Google GenAI client with API key
-client = genai.Client(api_key="AIzaSyC2t5t5HdTG5RoNOI4UhfPTEuQzDNwmyuU")
+client = genai.Client(api_key="<YOUR_API_KEY>")
 
 # Define system instructions for the GenAI model
 instructions = """
