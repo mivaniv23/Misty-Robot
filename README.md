@@ -1,4 +1,4 @@
-Misty Intruder Alert
+Misty Follow Human
 ====================
 
 In this project you can learn how to have Misty follow a human. 
