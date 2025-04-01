@@ -7,18 +7,18 @@ from google import genai
 from google.genai import types
 
 # Initialize Misty robot with IP address
-misty = Robot("<YOUR_IP_ADDRESS>")
+misty = Robot("10.100.2.30")
 print("connected")
 
 # Customize the robot's appearance and movements
 misty.change_led(100, 70, 160)  # Change LED to purple
-misty.move_head(-22, 0, 0)  # Move head
+misty.move_head(-12, 0, 0)  # Move head
 misty.move_arms(20, 20)  # Move arms
 misty.set_default_volume(40)  # Set volume
 misty.display_image("e_Admiration.jpg")  # Display an image on Misty's screen
 
 # Initialize the Google GenAI client with API key
-client = genai.Client(api_key="<YOUR_API_KEY>")
+client = genai.Client(api_key="AIzaSyC2t5t5HdTG5RoNOI4UhfPTEuQzDNwmyuU")
 
 # Define system instructions for the GenAI model
 instructions = """
@@ -123,7 +123,7 @@ def chat_with_gemini(transcription):
     return response.text
 
 # Estimate the time it takes to speak the transcribed text
-def estimate_speaking_time(text, words_per_minute=172):
+def estimate_speaking_time(text, words_per_minute=174):
     words = text.split()  # Split the transcription into words
     num_words = len(words)
     words_per_second = words_per_minute / 60
