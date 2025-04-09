@@ -29,7 +29,7 @@ Follow these steps to get the project up and running:
         
 2.  **Extract and Set Up the SDK**:
     
-    *   Extract the Python-SDK-main.zip file to a directory on your system.
+    *   Extract all files from the Python-SDK-main.zip file to a directory on your system.
         
     *   Place the robot.py file in the same directory as the extracted SDK files.
         
