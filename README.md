@@ -11,6 +11,7 @@ Requirements
 *   **Misty Robot**: You will need a Misty robot to interact with the Python code.
     
 *   **Python 3.9**: Ensure Python is installed on your system.
+    * You can install python using this link: https://www.python.org/downloads/release/python-3913/
     
 *   **WhatsApp Account*: You need an account to be able to send messages.
     
@@ -30,17 +31,25 @@ Follow these steps to get the project up and running:
         
 2.  **Extract and Set Up the SDK**:
     
-    *   Extract the Python-SDK-main.zip file to a directory on your system.
+    *   Extract all files from the Python-SDK-main.zip file to a directory on your system.
         
     *   Place the robot.py file in the same directory as the extracted SDK files.
         
 3.  **Install Dependencies**:
+    * Windows:
     ```bash
-    pip install pywhatkit
-    pip install -q -U requests==2.25.1
-    pip install -q -U websocket-client==0.57.0
-    pip install -q -U yapf==0.30.0
-    ```    
+    py -m pip install -q -U pywhatkit
+    py -m pip install -q -U requests==2.25.1
+    py -m pip install -q -U websocket-client==0.57.0
+    py -m pip install -q -U yapf==0.30.0
+    ```
+    * Mac:
+    ```bash
+    python3 -m pip install -q -U pywhatkit
+    python3 -m pip install -q -U requests==2.25.1
+    python3 -m pip install -q -U websocket-client==0.57.0
+    python3 -m pip install -q -U yapf==0.30.0
+    ```      
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
     *   Replace with your WhatsApp Account number.
