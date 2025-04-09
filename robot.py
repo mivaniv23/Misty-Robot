@@ -100,7 +100,7 @@ chat = client.chats.create(model="gemini-2.0-flash", config=types.GenerateConten
 # Function to transcribe an audio file using GenAI
 def transcribe(file_name):
     # Upload the audio file to GenAI
-    myfile = client.files.upload(file='C:/Users/lab/Documents/MistyDev/Python-SDK-main/' + file_name)
+    myfile = client.files.upload(file='/Users/makerspace/Desktop/Misty-Robot-main/' + file_name)
 
     # Generate transcription of the audio file
     response = client.models.generate_content(
@@ -153,7 +153,6 @@ def talk(callback_function):
 
     # Unregister any existing VoiceRecord events before registering a new one
     misty.unregister_event("VoiceRecord")
-    
     # Start capturing speech
     misty.capture_speech(True, 10000, 20000, False)
     
@@ -173,7 +172,7 @@ def talk(callback_function):
             transcription_data["transcription"] = "No speech detected or recording failed."
             print(transcription_data["transcription"])
             callback_function(transcription_data["transcription"])
-
+        misty.unregister_event("VoiceRecord")
     # Register the event and start listening for voice input
     misty.register_event(event_name="VoiceRecord", event_type=Events.VoiceRecord, callback_function=on_voice_record_event)
 
@@ -199,7 +198,7 @@ def options():
             download_audio(data['message']['filename'])
             option = transcribe(data['message']['filename'])  # Transcribe the user's speech
             print("Function option: " + option)
-            misty.unregister_event("VoiceRecord")  # Unregister the event once the transcription is done
+        misty.unregister_event("VoiceRecord")  # Unregister the event once the transcription is done
     
     # Register the event and listen for the user's input
     misty.register_event(event_name="VoiceRecord", event_type=Events.VoiceRecord, callback_function=on_voice_record_event)
@@ -287,3 +286,4 @@ while True:
 
     # Keep the robot alive and listening for events
     misty.keep_alive()
+
