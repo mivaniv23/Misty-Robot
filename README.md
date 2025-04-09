@@ -1,7 +1,7 @@
-Misty Robot Assistant for Catawba College Digital Learning Lab
-==============================================================
+Motivational Misty
+==================
 
-This project allows interaction with the Misty robot for Catawba College's Digital Learning Lab. The robot provides information about the lab's equipment, policies, and hours of operation, while also allowing users to have general conversations. Additionally, the robot can process voice commands for signing in or engaging in a conversation, leveraging Google GenAI for conversational responses.
+In this project, Misty transforms into a motivational companion who delivers encouraging messages, delightful visuals, and engaging animations whenever her head is touched. This project uses Misty’s built-in features to create an uplifting interaction, making her the perfect source of inspiration and motivation.
 
 Requirements
 ------------
@@ -10,8 +10,6 @@ Requirements
     
 *   **Python 3.9**: Ensure Python is installed on your system.
     * You can install python using this link: https://www.python.org/downloads/release/python-3913/
-    
-*   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
@@ -37,29 +35,21 @@ Follow these steps to get the project up and running:
 
     * Windows:
     ```bash
-    py -m pip install -q -U google-genai
     py -m pip install -q -U requests==2.25.1
     py -m pip install -q -U websocket-client==0.57.0
     py -m pip install -q -U yapf==0.30.0
     ```
     * Mac:
     ```bash
-    python3 -m pip install -q -U google-genai
     python3 -m pip install -q -U requests==2.25.1
     python3 -m pip install -q -U websocket-client==0.57.0
     python3 -m pip install -q -U yapf==0.30.0
     ```   
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
-    *   Replace with your Google GenAI API key.
-    *   Replace with your path to the Misty-Robot-Main folder.
         ```python
-        #line 10     
+        #line 6    
         misty = Robot("<YOUR_IP_ADDRESS>")
-        #line 21
-        client = genai.Client(api\_key="<YOUR_API_KEY>")
-        #line 103
-        myfile = client.files.upload(file='<YOUR_PATH_TO_FOLDER>/Misty-Robot-Main/' + file_name)
         ```
 
         
@@ -76,25 +66,21 @@ Follow these steps to get the project up and running:
         ```
 6.  **Interacting with the Robot**:
     
-    *   Once the script is running, the robot will start its face recognition.
-        
-    *   When a face is recognized as "unknown," it will ask whether you want to sign in or start a conversation.
-        
-    *   If you choose a conversation, the robot will transcribe your speech, process it using Google GenAI, and respond accordingly.
-        
-    *   If you choose to sign in, the robot will display a QR code for you to scan.
+    *   Once the script is running, the Misty robot will perform a series of actions based on touch events. The robot is designed to react to touch by performing different animations and providing encouraging speech.
         
 
 Features
 --------
 
-*   **Misty Robot Movements**: The robot's LED color, head position, and arms can be customized.
+*   **Misty Robot Movements**: The robot's LED color, head position, and arms can be customized for each animation.
     
-*   **Voice Interaction**: The robot can record speech, transcribe it, and interact with you based on the transcription.
+*   **Voice Interaction**: The robot plays different audio clips and speaks encouraging phrases based on the animation selected.
     
-*   **Google GenAI Integration**: The robot uses Google GenAI to provide conversational responses and interact intelligently with users.
+*   **Randomized Responses**: The animations are randomized, providing varied experiences each time the robot is touched.
     
-*   **Sign-In Feature**: Users can sign in using a QR code displayed by the robot.
+*   **LED Transitions**: The robot's LED colors transition smoothly during animations, enhancing the visual experience.
+
+*   **Touch-Activated Animations**: The robot reacts to touch by performing random animations from a predefined list.
     
 
 Notes
