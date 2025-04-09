@@ -44,10 +44,10 @@ Follow these steps to get the project up and running:
     ```
     * Mac:
     ```bash
-    pythpn3 -m pip install -q -U google-genai
-    pythpn3 -m pip install -q -U requests==2.25.1
-    pythpn3 -m pip install -q -U websocket-client==0.57.0
-    pythpn3 -m pip install -q -U yapf==0.30.0
+    python3 -m pip install -q -U google-genai
+    python3 -m pip install -q -U requests==2.25.1
+    python3 -m pip install -q -U websocket-client==0.57.0
+    python3 -m pip install -q -U yapf==0.30.0
     ```   
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
