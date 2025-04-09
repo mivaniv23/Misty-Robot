@@ -9,6 +9,7 @@ Requirements
 *   **Misty Robot**: You will need a Misty robot to interact with the Python code.
     
 *   **Python 3.9**: Ensure Python is installed on your system.
+    * You can install python using this link: https://www.python.org/downloads/release/python-3913/
     
 *   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
     
