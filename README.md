@@ -9,6 +9,7 @@ Requirements
 *   **Misty Robot**: You will need a Misty robot to interact with the Python code.
     
 *   **Python 3.9**: Ensure Python is installed on your system.
+    * You can install python using this link: https://www.python.org/downloads/release/python-3913/
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
@@ -31,11 +32,19 @@ Follow these steps to get the project up and running:
     *   Place the robot.py file in the same directory as the extracted SDK files.
         
 3.  **Install Dependencies**:
+
+    * Windows:
     ```bash
-    pip install -q -U requests==2.25.1
-    pip install -q -U websocket-client==0.57.0
-    pip install -q -U yapf==0.30.0
-    ```    
+    py -m pip install -q -U requests==2.25.1
+    py -m pip install -q -U websocket-client==0.57.0
+    py -m pip install -q -U yapf==0.30.0
+    ```
+    * Mac:
+    ```bash
+    python3 -m pip install -q -U requests==2.25.1
+    python3 -m pip install -q -U websocket-client==0.57.0
+    python3 -m pip install -q -U yapf==0.30.0
+    ```  
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
     *  Set up the modes. Read about modes in section Modes lower.
@@ -49,9 +58,14 @@ Follow these steps to get the project up and running:
 6.  **Running the Code**:
     
     *   Open a terminal or command prompt in the directory where you placed the files.
-    ```bash    
-    py robot.py
-    ```    
+        * Windows:
+        ```bash    
+        py robot.py
+        ```
+        * Mac:
+        ```bash    
+        python3 robot.py
+        ```
         
 
 Modes
