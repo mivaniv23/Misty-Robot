@@ -62,9 +62,14 @@ Follow these steps to get the project up and running:
 6.  **Running the Code**:
     
     *   Open a terminal or command prompt in the directory where you placed the files.
-    ```bash    
-    py robot.py
-    ```    
+        * Windows:
+        ```bash    
+        py robot.py
+        ```
+        * Mac:
+        ```bash    
+        python3 robot.py
+        ```   
         
 
 Description
