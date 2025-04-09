@@ -51,10 +51,14 @@ Follow these steps to get the project up and running:
 5.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
     *   Replace with your Google GenAI API key.
-        ```python    
-        line 10 misty = Robot("<YOUR_IP_ADDRESS>")
-        line 21 client = genai.Client(api\_key="<YOUR_API_KEY>")
-        line 103 myfile = client.files.upload(file='/Users/makerspace/Desktop/Misty-Robot-main/' + file_name)
+    *   Replace with your path to the Misty-Robot-Main folder.
+        ```python
+        #line 10     
+        misty = Robot("<YOUR_IP_ADDRESS>")
+        #line 21
+        client = genai.Client(api\_key="<YOUR_API_KEY>")
+        #line 103
+        myfile = client.files.upload(file='<YOUR_PATH_TO_FOLDER>/Misty-Robot-Main/' + file_name)
         ```
 
         
