@@ -35,19 +35,20 @@ Follow these steps to get the project up and running:
         
 3.  **Install Dependencies**:
         * Windows:
-            ```bash
-            py -m pip install -q -U google-genai
-            py -m pip install -q -U requests==2.25.1
-            py -m pip install -q -U websocket-client==0.57.0
-            py -m pip install -q -U yapf==0.30.0
-            ```
+    ```bash
+    py -m pip install -q -U google-genai
+    py -m pip install -q -U requests==2.25.1
+    py -m pip install -q -U websocket-client==0.57.0
+    py -m pip install -q -U yapf==0.30.0
+    ```
         * Mac:
-            ```bash
-            pythpn3 -m pip install -q -U google-genai
-            pythpn3 -m pip install -q -U requests==2.25.1
-            pythpn3 -m pip install -q -U websocket-client==0.57.0
-            pythpn3 -m pip install -q -U yapf==0.30.0
-            ```   
+    
+    ```bash
+    pythpn3 -m pip install -q -U google-genai
+    pythpn3 -m pip install -q -U requests==2.25.1
+    pythpn3 -m pip install -q -U websocket-client==0.57.0
+    pythpn3 -m pip install -q -U yapf==0.30.0
+    ```   
 5.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
     *   Replace with your Google GenAI API key.
