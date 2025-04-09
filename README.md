@@ -55,8 +55,8 @@ Follow these steps to get the project up and running:
     ```   
 4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
-    *   Replace with your Google GenAI API key.
-    *   Replace with your path to the Misty-Robot-Main folder.
+    *   Replace with your WheatherStack API key
+    *   Replace with your City
         ```python
         #line 4     
         misty = Robot("<YOUR_IP_ADDRESS>")
