@@ -100,7 +100,7 @@ chat = client.chats.create(model="gemini-2.0-flash", config=types.GenerateConten
 # Function to transcribe an audio file using GenAI
 def transcribe(file_name):
     # Upload the audio file to GenAI
-    myfile = client.files.upload(file='/Users/makerspace/Desktop/Misty-Robot-main/' + file_name)
+    myfile = client.files.upload(file='<YOUR_PATH_TO_FOLDER>/Misty-Robot-Main/' + file_name)
 
     # Generate transcription of the audio file
     response = client.models.generate_content(
