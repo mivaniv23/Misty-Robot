@@ -1,7 +1,7 @@
-Misty Robot Assistant for Catawba College Digital Learning Lab
-==============================================================
+Misty Get Weather
+=================
 
-This project allows interaction with the Misty robot for Catawba College's Digital Learning Lab. The robot provides information about the lab's equipment, policies, and hours of operation, while also allowing users to have general conversations. Additionally, the robot can process voice commands for signing in or engaging in a conversation, leveraging Google GenAI for conversational responses.
+In this project, Misty will use the command send_external request to connect with Weatherstack and request your city's data.
 
 Requirements
 ------------
@@ -11,7 +11,13 @@ Requirements
 *   **Python 3.9**: Ensure Python is installed on your system.
     * You can install python using this link: https://www.python.org/downloads/release/python-3913/
     
-*   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
+*   **WeatherStack API Key**: You need an API key from WeatherStack to handle weather responses.
+    Weatherstack is an online weather data API service that provides real-time weather information, historical data, and weather forecasts for various locations around the world. It is commonly used by developers to integrate weather data into applications and websites. The service is known for its reliability, ease  of use, and wide coverage, making it popular for various weather-based applications and projects.
+    * Navigate in Weatherstack, link: https://weatherstack.com/
+    * Click on "START USING THE API"
+    * Sign up with your credentials and your plan (we used the free version, which gives only 250 API requests)
+    * Click on "VISIT DASHBOARD"
+    * and you'll see your API Key with many other information.
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
@@ -37,14 +43,12 @@ Follow these steps to get the project up and running:
 
     * Windows:
     ```bash
-    py -m pip install -q -U google-genai
     py -m pip install -q -U requests==2.25.1
     py -m pip install -q -U websocket-client==0.57.0
     py -m pip install -q -U yapf==0.30.0
     ```
     * Mac:
     ```bash
-    python3 -m pip install -q -U google-genai
     python3 -m pip install -q -U requests==2.25.1
     python3 -m pip install -q -U websocket-client==0.57.0
     python3 -m pip install -q -U yapf==0.30.0
@@ -54,12 +58,12 @@ Follow these steps to get the project up and running:
     *   Replace with your Google GenAI API key.
     *   Replace with your path to the Misty-Robot-Main folder.
         ```python
-        #line 10     
+        #line 4     
         misty = Robot("<YOUR_IP_ADDRESS>")
-        #line 21
-        client = genai.Client(api\_key="<YOUR_API_KEY>")
-        #line 103
-        myfile = client.files.upload(file='<YOUR_PATH_TO_FOLDER>/Misty-Robot-Main/' + file_name)
+        #line 10
+        access_key = "<YOUR_API_KEY>" 
+        #line 11
+        query = "<YOUR_CITY>"
         ```
 
         
@@ -76,25 +80,19 @@ Follow these steps to get the project up and running:
         ```
 6.  **Interacting with the Robot**:
     
-    *   Once the script is running, the robot will start its face recognition.
-        
-    *   When a face is recognized as "unknown," it will ask whether you want to sign in or start a conversation.
-        
-    *   If you choose a conversation, the robot will transcribe your speech, process it using Google GenAI, and respond accordingly.
-        
-    *   If you choose to sign in, the robot will display a QR code for you to scan.
+    *   After extracting the weather data, the robot verbally informs the user about the current weather conditions in the specified city. Misty will speak the weather update, and you’ll see a printed message in the terminal.
         
 
 Features
 --------
 
-*   **Misty Robot Movements**: The robot's LED color, head position, and arms can be customized.
+*   **Misty Robot Movements**: The robot can change its LED color, move its head, and display images on its screen.
     
 *   **Voice Interaction**: The robot can record speech, transcribe it, and interact with you based on the transcription.
     
-*   **Google GenAI Integration**: The robot uses Google GenAI to provide conversational responses and interact intelligently with users.
+*   **Weather Information**: The script fetches real-time weather data for a given city using the WeatherStack API and shares this information with the user.
     
-*   **Sign-In Feature**: Users can sign in using a QR code displayed by the robot.
+*   **Customizable Experience**: You can modify the city and customize the robot's behavior, including changing its image, LED colors, and more.
     
 
 Notes
