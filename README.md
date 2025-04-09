@@ -34,22 +34,22 @@ Follow these steps to get the project up and running:
     *   Place the robot.py file in the same directory as the extracted SDK files.
         
 3.  **Install Dependencies**:
-        * Windows:
+
+    * Windows:
             ```bash
             py -m pip install -q -U google-genai
             py -m pip install -q -U requests==2.25.1
             py -m pip install -q -U websocket-client==0.57.0
             py -m pip install -q -U yapf==0.30.0
             ```
-        * Mac:
-
+    * Mac:
     ```bash
     pythpn3 -m pip install -q -U google-genai
     pythpn3 -m pip install -q -U requests==2.25.1
     pythpn3 -m pip install -q -U websocket-client==0.57.0
     pythpn3 -m pip install -q -U yapf==0.30.0
     ```   
-5.  **Configure the Robot and API Keys**:
+4.  **Configure the Robot and API Keys**:
     *   Replace with the Misty robot's IP address.
     *   Replace with your Google GenAI API key.
     *   Replace with your path to the Misty-Robot-Main folder.
@@ -63,7 +63,7 @@ Follow these steps to get the project up and running:
         ```
 
         
-6.  **Running the Code**:
+5.  **Running the Code**:
     
     *   Open a terminal or command prompt in the directory where you placed the files.
         * Windows:
@@ -74,7 +74,7 @@ Follow these steps to get the project up and running:
         ```bash    
         python3 robot.py
         ```
-7.  **Interacting with the Robot**:
+6.  **Interacting with the Robot**:
     
     *   Once the script is running, the robot will start its face recognition.
         
