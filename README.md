@@ -15,6 +15,8 @@ Requirements
     * You can get your API key using this link: https://ai.google.dev/gemini-api/docs
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
+
+*    **Misty APP**: Misty App installed on your Iphone or Ipad. You can download the app using this link: https://apps.apple.com/us/app/misty-app/id1296946424?platform=iphone
     
 
 Project Setup
