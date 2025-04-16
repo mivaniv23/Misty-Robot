@@ -12,6 +12,7 @@ Requirements
     * You can install python using this link: https://www.python.org/downloads/release/python-3913/
     
 *   **Google GenAI API Key**: You need an API key from Google GenAI to handle conversational responses.
+    * You can get your API key using this link: https://ai.google.dev/gemini-api/docs
     
 *   **Misty Python SDK**: The Misty Python SDK must be downloaded and set up on your local machine.
     
